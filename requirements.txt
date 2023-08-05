@@ -1,0 +1,8 @@
+feedparser
+streamlit
+seaborn
+sklearn
+bs4
+Newspaper3k
+langchain
+openai
