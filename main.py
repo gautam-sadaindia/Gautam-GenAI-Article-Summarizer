@@ -19,7 +19,6 @@ def run(url, count, model, user_prompt, chunk_size, chunk_overlap):
     progress.empty()
     df = pd.DataFrame.from_dict(summaries)
     df.index = np.arange(1, len(df) + 1)
-    df.columns = ['Title', 'Summary']
     st.table(df)
     st.write(f"Summary generated in {duration:.2f} seconds.")
 
