@@ -13,7 +13,8 @@ def setup_feed(rss_feed_url, count):
 
 def Content(url, chunk_size, chunk_overlap):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-    article = Article(url).download()
+    article = Article(url)
+    article.download()
     article.parse()
     texts = text_splitter.split_text(article.text)
     docs = [Document(page_content=i) for i in texts[:3]]
