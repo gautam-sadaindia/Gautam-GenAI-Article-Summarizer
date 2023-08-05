@@ -7,6 +7,8 @@ import chunks
 from models.vertexai_model import TextBisonModel
 from models.openai_model import LangChainModel
 
+st.set_page_config(layout="wide")
+
 def run(url, count, model, user_prompt, chunk_size, chunk_overlap):
     progress = st.progress(0, "Preparing custom summary. Please wait")
     def progressBar(percent):
@@ -22,11 +24,8 @@ def run(url, count, model, user_prompt, chunk_size, chunk_overlap):
     st.table(df)
     st.write(f"Summary generated in {duration:.2f} seconds.")
 
-    st.button("Another one!", on_click=main)
-
 
 def main():
-    st.set_page_config(layout="wide")
     st.title("Summarization App")
     llmOption = st.sidebar.selectbox("LLM",["OpenAI", "VertexAI", "Other (open source in the future)"])
     chunk_size = st.sidebar.slider("Chunk Size", min_value=20, max_value = 10000,
