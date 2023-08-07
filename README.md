@@ -8,3 +8,5 @@ For VertexAI, set your GCP project and Application Credentials accordingly.
 Install dependencies using: `pip install -r requirements.txt`
 
 eg RSS feeds - (https://feeds.megaphone.fm/ADL9840290619), (https://feeds.fireside.fm/bibleinayear/rss)
+
+The chunk visualizer is in progress. Might not work.
