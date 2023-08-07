@@ -36,8 +36,8 @@ def main():
     if st.sidebar.checkbox("Debug chunk size"):
         st.header("Interactive Text Chunk Visualization")
 
-        tempFile = open("chunk_visualizer.txt","r+")
-        text_input = st.text_area(tempFile.read())
+        # tempFile = open("chunk_visualizer.txt","r+")
+        text_input = st.text_area("Input Text", "This is a test text to showcase the functionality of the interactive text chunk visualizer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi justo neque, blandit vitae sem a, dapibus tincidunt lacus. Ut a egestas mi, eget luctus lacus. Nulla sodales, velit et dignissim rutrum, urna lectus finibus odio, a hendrerit risus magna et lacus. Nam velit sem, mollis non lectus quis, tristique faucibus risus. Sed rutrum efficitur maximus. Fusce eu lacus vehicula, tempus justo vitae, elementum quam. Mauris tellus mauris, ultricies in massa in, tincidunt tristique urna.")
 
         html_code = chunks.color_chunks(text_input, chunk_size, chunk_overlap)
         st.markdown(html_code, unsafe_allow_html=True)            
